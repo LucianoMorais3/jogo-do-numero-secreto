@@ -17,7 +17,6 @@ exibirMensagemInicial();
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
-    console.log(chute == numeroSecreto);
 
     if(chute == numeroSecreto){
         exibirTextoNaTela('h1', 'Acertou!');
@@ -59,7 +58,7 @@ function limparCampo(){
 }
 
 function reiniciarJogo(){
-    numeroSecreto = gerarNumeroAleatorio;
+    numeroSecreto = gerarNumeroAleatorio();
     limparCampo();
     tentativas = 1;
     exibirMensagemInicial();
